@@ -11,8 +11,10 @@
 - [x] 使用官方 `ljg-card` 模板完成 160 张卡片的 ledger 校验和 PNG capture。
 - [x] 完成离线 `preview/index.html`、`preview/guide.html`、样式、搜索/筛选/字号/已学及低压力复习模式。
 - [x] 运行本地完整性检查、代表性卡片视觉检查和离线预览交互检查。
-- [ ] 创建 `0xAAcodeislaw/diamond-sutra-study` 私有仓库。
-- [ ] 推送 `main` 分支和 `v0.1.0-preview` 标签。
-- [ ] 远端复验可见性、默认分支、commit SHA、tag 和文件结构。
+- [x] 创建 `0xAAcodeislaw/diamond-sutra-study` 私有仓库。
+- [x] 推送 `main` 分支和 `v0.1.0-preview` 标签。
+- [x] 远端复验可见性为 `PRIVATE`、默认分支为 `main`，且远端 tag 与 main 可读取。
 
 当前工作区没有凭证阻塞；GitHub 发布步骤沿用 Codex 当前已认证身份，不使用云浏览器，也不输出密码、Token 或验证码。
+
+远端：<https://github.com/0xAAcodeislaw/diamond-sutra-study>。发布完成后若继续修改正文、卡片或图片，应创建新的版本标签，不要覆盖本标签。
