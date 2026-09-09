@@ -72,7 +72,8 @@ full_text_md = (R / "content/full-text.md").read_text(encoding="utf-8")
 check(all(section["original"] in full_text_md for section in sections), "full-text Markdown misses a section")
 check(all(section.get("reading") for section in sections), "section reading fields missing")
 tokens = [token for passage in classic["passages"] for token in passage["tokens"] if not token.get("punctuation")]
-check(len(tokens) == 1524, "unexpected annotated token count")
+check(len(tokens) >= 196, "expected sentence-level annotated tokens")
+check(not any(token.get("note") == "本段语境中的连续语义单位；结合整句理解。" for token in tokens), "placeholder annotation remains")
 check(all(token.get("note") for token in tokens), "an annotated token has no note")
 
 

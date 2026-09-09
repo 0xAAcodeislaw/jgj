@@ -1,4 +1,4 @@
-# `v0.1.0-preview` 验收记录
+# `v0.1.1-preview` 修订验收记录
 
 ## 内容与来源
 
@@ -11,7 +11,7 @@
 
 固定技能版本：`0f16badf701f8c8a788ed5942ce7b670f742f1e7`。
 
-`ljg-classic` 输入 `data/classic.json`，输出 `assets/cards/classic.html` 与 `assets/cards/classic.png`。官方 `ValidateClassic.ts` 结果：`status=valid`，PNG `1080 × 113147`，`tokenCount=2041`，`annotationCount=1524`，`annotationCoverage=1`，`interpretationParagraphs=8`，`heroPresent=true`，`qaSlices=85`。85 张切片保存在 `verification/classic-slices/`。
+`ljg-classic` 输入 `data/classic.json`，输出 `assets/cards/classic.html` 与 `assets/cards/classic.png`。本次修订将原先的占位注释替换为按句群展开的原经文翻译。官方 `ValidateClassic.ts` 结果：`status=valid`，PNG `1080 × 72341`，`tokenCount=2569`，`annotationCount=1172`，`annotationCoverage=1`，`interpretationParagraphs=8`，`heroPresent=true`，`qaSlices=54`。54 张切片保存在 `verification/classic-slices/`。
 
 `ljg-card` 使用官方 full template。160 张普通卡均先通过 `verify-full-text.ts`，再由 `capture.ts` 生成 PNG；每张卡的源文本和 block ledger 在 `verification/card-sources/`、`verification/card-ledgers/`。普通卡与 classic 长图合计 161 个 1080 像素宽 PNG/HTML 文件。
 
@@ -30,6 +30,8 @@ python3 scripts/build-preview.py
 python3 scripts/check.py
 ```
 
-最终检查应输出 `status: pass`，并报告 `cards=160`、`sections=32`、`annotations=1524`、`rendered_cards=161`、`illustrations=6`、`chars=5179`。官方工具需要在拥有 Chromium 权限的本机环境运行；普通结构检查和预览不需要联网。
+最终检查应输出 `status: pass`，并报告 `cards=160`、`sections=32`、`annotations=1172`、`rendered_cards=161`、`illustrations=6`、`chars=5179`。`scripts/check.py` 还会拒绝旧的占位注释。官方工具需要在拥有 Chromium 权限的本机环境运行；普通结构检查和预览不需要联网。
+
+句义修订的校对来源、使用边界和外部链接见 `verification/translation-sources.md`；红色注释是本项目的学习译写，原文仍以锁定的底本文件为准。
 
 视觉抽查覆盖 classic 首部、中部和尾部切片，以及普通卡的原文、翻译、术语和记忆类别。图片作为学习锚点，不被当作经文正文、历史肖像或教义证明。
