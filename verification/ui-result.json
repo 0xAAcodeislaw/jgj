@@ -1,0 +1,31 @@
+{
+  "preview": "http://127.0.0.1:8765/preview/index.html",
+  "guide": "http://127.0.0.1:8765/preview/guide.html",
+  "checks": {
+    "search": {
+      "query": "如梦幻泡影",
+      "count_text": "显示 2 张 / 共 160 张 · 搜索全部类别"
+    },
+    "category_filter": {
+      "category": "pronunciation",
+      "count_text": "显示 42 张 / 共 160 张"
+    },
+    "expand": {
+      "card": "s01",
+      "open": true
+    },
+    "learned_state": {
+      "card": "s01",
+      "button_text": "已学过 · 可再复习"
+    },
+    "gentle_mode": {
+      "pressed": true,
+      "note_visible": true,
+      "count_text": "显示 1 张 / 共 160 张"
+    },
+    "guide_page": {
+      "title": "伴读与理解",
+      "sections": 8
+    }
+  }
+}

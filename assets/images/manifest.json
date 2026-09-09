@@ -1,0 +1,50 @@
+[
+  {
+    "file": "assets/images/monastic-bowl.png",
+    "sha256": "01e79de8408c4f0e9436763f0409a916a9ef205c5ff0c6ad357d609329fde7e4",
+    "width": 1536,
+    "height": 1024,
+    "purpose": "法会因由、乞食、回到树园敷座；把宏大经义放回日常动作。",
+    "prompt_constraints": "无文字、无水印、无 logo；低干扰水彩/水墨教学类比。"
+  },
+  {
+    "file": "assets/images/open-hand.png",
+    "sha256": "f972d6f95f2cc8485ad96c7ba45460cfa9cb8c715eb833b05eb82297dfaa1421",
+    "width": 1536,
+    "height": 1024,
+    "purpose": "无住布施与不受福德；手有行动而不把功劳握成身份。",
+    "prompt_constraints": "无文字、无水印、无 logo；低干扰水彩/水墨教学类比。"
+  },
+  {
+    "file": "assets/images/reflection.png",
+    "sha256": "5cb1a3858068e439453e4d76fba3411cb409fa286a502ad3d0479ba7c98c44af",
+    "width": 1536,
+    "height": 1024,
+    "purpose": "凡所有相、诸相非相；形影可见而不固定。",
+    "prompt_constraints": "无文字、无水印、无 logo；低干扰水彩/水墨教学类比。"
+  },
+  {
+    "file": "assets/images/empty-sky.png",
+    "sha256": "b00a3e9ea3acadc085bcede1db4c3488a30760654bd3177d2f41f53b6aff30b8",
+    "width": 1536,
+    "height": 1024,
+    "purpose": "虚空、微尘、三世心不可得；保留空间感与不占有。",
+    "prompt_constraints": "无文字、无水印、无 logo；低干扰水彩/水墨教学类比。"
+  },
+  {
+    "file": "assets/images/quiet-garden.png",
+    "sha256": "77fb12b35530f7ddd6bf42cc9418a34c3d0c8a2e7088b28af166b978a313238d",
+    "width": 1536,
+    "height": 1024,
+    "purpose": "庄严净土与清净心；安静场景不替经文作宗教证明。",
+    "prompt_constraints": "无文字、无水印、无 logo；低干扰水彩/水墨教学类比。"
+  },
+  {
+    "file": "assets/images/boat-crossing.png",
+    "sha256": "74d20d376a3c7f5f9bbacea07b1620724af93c63a769b59307f04d6875c86c4d",
+    "width": 1536,
+    "height": 1024,
+    "purpose": "筏喻、无住、如如不动与结尾渡行；小舟只作记忆类比。",
+    "prompt_constraints": "无文字、无水印、无 logo；低干扰水彩/水墨教学类比。"
+  }
+]
