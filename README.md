@@ -10,7 +10,7 @@
 
 先从一个分读开始：看原文，听自己的朗读，说出句群意思，遮盖后回忆，再记录一个错点。卡片支持搜索、分类、字号、已学标记和“今天睡得不好，只复习已学卡”的轻量模式。学习记录保存在当前浏览器，使用独立的 `diamond-sutra-learned-v1` 存储键，不覆盖前两个项目。
 
-- [完整经文](content/full-text.md) · [全文注解长图](assets/cards/classic.png) · [全文注解 HTML](assets/cards/classic.html)
+- [完整经文](content/full-text.md) · [手机友好全文注解长图](assets/cards/classic.png) · [手机分片版](assets/cards/classic-pages.md) · [全文注解 HTML](assets/cards/classic.html)
 - [注音与诵读](content/pronunciation.md) · [句群翻译](content/translations.md) · [人物、出处与语境](content/allusions.md)
 - [术语与名句](content/idioms-and-lines.md) · [背诵方法](content/memorization.md)
 - [结构伴读](content/reading-map.md) · [问答链](content/questions.md) · [白话解读](content/interpretation.md)
@@ -31,7 +31,7 @@
 | 全文注解长图 | 1 |
 | 无字记忆配图 | 6 |
 
-正文共 5,179 个汉字（题署、分名、标点不计），末尾“应作如是观”偈和“信受奉行”结尾均保留。每张卡都有 Markdown、HTML、PNG 和 JSON 记录；全文注解长图由官方 `ljg-classic` 工具生成，54 张重叠切片用于视觉检查，红色句义按句群翻译原经文，不再使用占位注释。42 个注音、23 个出处语境、22 个术语名句和 8 张记忆卡分别有独立源文件。
+正文共 5,179 个汉字（题署、分名、标点不计），末尾“应作如是观”偈和“信受奉行”结尾均保留。每张卡都有 Markdown、HTML、PNG 和 JSON 记录；全文注解长图由官方 `ljg-classic` 工具生成，54 张重叠切片用于视觉检查，红色句义按句群翻译原经文，不再使用占位注释。面向手机和 GitHub 图片查看器的 `classic.png` 保持 1080 × 72341 尺寸，改用 256 色表压缩到约 4.7 MB；官方原始渲染 hash 另记在 manifest 中。42 个注音、23 个出处语境、22 个术语名句和 8 张记忆卡分别有独立源文件。
 
 三十二分的导航名为：法会因由、善现启请、大乘正宗、妙行无住、如理实见、正信希有、无得无说、依法出生、一相无相、庄严净土、无为福胜、尊重正教、如法受持、离相寂灭、持经功德、能净业障、究竟无我、一体同观、法界通化、离色离相、非说所说、无法可得、净心行善、福智无比、化无所化、法身非相、无断无灭、不受不贪、威仪寂静、一合理相、知见不生、应化非真。它们是常见的学习导航名，原经没有现代卡片式标题层级。
 
@@ -92,7 +92,7 @@ python3 scripts/build-preview.py
 python3 scripts/check.py
 ```
 
-官方渲染命令、160 张卡片的 ledger/capture 结果、全文注解长图的 54 个切片和浏览器检查记录见 [验收报告](verification/REPORT.md)。本次长图句义修订的底本、白话对照和注疏复核来源见 [翻译复核来源](verification/translation-sources.md)。`scripts/check.py` 会检查全文字符数、分段拼接、源文 hash、JSON 字段、卡片账本、PNG/HTML、图片 hash、classic manifest、预览链接和独立存储键。
+官方渲染命令、160 张卡片的 ledger/capture 结果、全文注解长图的 54 个切片和浏览器检查记录见 [验收报告](verification/REPORT.md)。本次长图句义修订的底本、白话对照和注疏复核来源见 [翻译复核来源](verification/translation-sources.md)。`scripts/check.py` 会检查全文字符数、分段拼接、源文 hash、JSON 字段、卡片账本、PNG/HTML、图片 hash、classic manifest、移动端 PNG 大小、预览链接和独立存储键。
 
 修订时从 `data/section-source.json`、`data/cards.json` 和 Markdown 源开始，并重新生成预览、卡片账本和校验结果；不要只改 PNG 或只改预览。外部出处链接需要联网，离线预览不需要。
 

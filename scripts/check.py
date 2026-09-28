@@ -158,6 +158,8 @@ for image in images:
         check(sha(image_path) == image["sha256"], f"image hash {image['file']}")
 
 classic_manifest = read_json("verification/classic.manifest.json")
+check((R / "assets/cards/classic.png").stat().st_size < 10 * 1024 * 1024, "classic PNG should stay below 10 MiB for mobile viewers")
+check(classic_manifest.get("pngOptimization", {}).get("sameDimensions") is True, "classic PNG optimization record is missing")
 for key, relative in (("input", "data/classic.json"), ("html", "assets/cards/classic.html"), ("png", "assets/cards/classic.png")):
     check(sha(R / relative) == classic_manifest["sha256"][key], f"classic {key} hash")
 for detail in classic_manifest.get("qaSliceDetails", []):
